@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Assistant Réservation (démo)</title>
-  <link rel="stylesheet" href="/widget.css" />
+  <link rel="stylesheet" href="/public/widget.css" />
   <meta name="description" content="Démo de widget de chat pour réponses clients et gestion de réservations." />
   <style>
     body { font-family: ui-sans-serif, system-ui, Arial, sans-serif; padding: 32px; color:#0f172a; }
@@ -16,20 +16,20 @@
 </head>
 <body>
   <h1>Assistant Réservation (démo)</h1>
-  <p>Voici une démonstration simple d’un widget de chat que vos clients pourraient avoir sur leur site. Cliquez sur la bulle en bas à droite puis écrivez un message.</p>
+  <p>Voici une démonstration simple d’un widget de chat. Cliquez sur la bulle en bas à droite puis écrivez un message.</p>
 
   <div class="demo">
-    <strong>Ce widget fonctionne sans serveur</strong> (réponses de démonstration intégrées).<br/>
+    <strong>Ce widget fonctionne sans serveur</strong> (réponses de démo intégrées).<br/>
     Plus tard, il pourra se connecter à votre n8n pour gérer des réservations réelles.
-    <div class="hint">Astuce : essayez “Je veux réserver demain 19h”.</div>
+    <div class="hint">Astuce : essayez “Je veux réserver demain 19h”.</div>
   </div>
 
   <div id="n8n-chat-root"></div>
-  <script type="module" src="/widget.js"></script>
+  <script type="module" src="/public/widget.js"></script>
   <script>
-    // Démo locale : pas de webhook, on laisse vide pour activer les réponses intégrées
+    // Démo : laissez webhookUrl vide → réponses automatiques
     window.N8NChatWidget.init({
-      webhookUrl: "", // laisser vide en démo → réponses automatiques
+      webhookUrl: "",
       siteId: "DEMO_SITE",
       headerTitle: "Assistant Réservation (démo)",
       welcome: "Bonjour 👋 Je suis la démo. Posez-moi une question ou demandez une réservation.",
